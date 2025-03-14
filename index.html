@@ -9,7 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preload" href="img/animation.gif" as="image">
   <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
 
   <title>BanderoGoose GoIT</title>
 </head>
@@ -28,7 +31,7 @@
 
         <p class="description">Спеціальний бойовий гусак із біолабораторій України. Пишаюся своїми подвигами, бороню Батьківщину та підтримую позитивний дух народу. Слава Україні!</p>
 
-        <button>Запустити гуся</button>
+        <button class="call-to-action">Запустити гуся</button>
       </div>
 
       <img src="img/goose.svg" alt="бандерогусь">
@@ -38,8 +41,8 @@
   <section class="facts">
     <div class="container">
       <div class="content">
-        <img src="img/tryzub.svg" alt="тризуб" class="tryzub">
-        
+        <img src="img/tryzub.svg" alt="тризуб">
+
         <h2>Цікаві факти про бандерогусей</h2>
 
         <p class="description">Зазвичай бандерогуси — виключно мирні птахи. Але у разі небезпеки можуть атакувати ворога системою надпотужного озброєння. Також нищать психологічно, активуючи високочастотне шипіння та розмахування крилами</p>
@@ -65,6 +68,30 @@
         </li>
       </ul>
     </div>
+  </section>
+
+  <section class="subscribtion">
+    <form action="#">
+      <img src="img/tryzub.svg" alt="тризуб">
+
+      <h4>Поділися, будь ласка, поштою</h4>
+
+      <p>і запиши гуся до бандерозагону</p>
+
+      <label>
+        <span>Ім’я</span>
+        <input type="text" name="name" required>
+      </label>
+
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" required>
+      </label>
+
+      <button popovertarget="animation">Запустити гуся</button>
+
+      <img popover="manual" id="animation" src="img/animation.gif" alt="гусак полетів">
+    </form>
   </section>
 </body>
 

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   line-height: 24px;
@@ -8,6 +12,10 @@ body {
 .container {
   margin: auto;
   width: 1170px;
+}
+
+img {
+  vertical-align: top;
 }
 
 button {
@@ -21,6 +29,17 @@ button {
   font-weight: 400;
   color: #fff;
   cursor: pointer;
+  transition: 500ms;
+
+  &:hover:not(:disabled) {
+    box-shadow: 0 0 3px 2px #fff, 0 0 10px 3px #ff6b0a,
+      inset 0 0 3px 2px #ff6b0a, inset 0 0 10px 3px #fff;
+  }
+  
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
 }
 
 .hero {
@@ -70,11 +89,6 @@ button {
   padding-block: 48px 100px;
   text-align: center;
 
-  .tryzub {
-    margin: auto;
-    display: block;
-  }
-
   h2 {
     margin-block: 24px 32px;
     line-height: 72px;
@@ -103,6 +117,59 @@ button {
         font-size: 24px;
         font-weight: 600;
       }
+    }
+  }
+}
+
+.subscribtion {
+  padding-block: 80px;
+  background: linear-gradient(to right, #a5deff, transparent);
+
+  form {
+    margin-inline: auto;
+    border-radius: 40px;
+    background: #fff;
+    max-width: 570px;
+    padding: 32px 60px 60px;
+    box-sizing: border-box;
+    text-align: center;
+
+    h4 {
+      margin-block: 32px 12px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    label {
+      margin-block: 24px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      gap: 8px;
+
+      input {
+        border-radius: 8px;
+        height: 60px;
+        border: 1px solid #005bbb;
+        box-sizing: border-box;
+        padding: 12px 24px;
+        font: inherit;
+      }
+    }
+
+    button {
+      margin-top: 24px;
+    }
+
+    #animation {
+      border: none;
+      width: 100vw;
+      background: transparent;
+      pointer-events: none;
     }
   }
 }
